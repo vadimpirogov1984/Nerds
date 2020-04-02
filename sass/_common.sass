@@ -41,15 +41,17 @@ a
 	border: none
 	transition: $anim
 	&:hover
+		// color: #fb565a
 		background-color: #e74246
 	&:active
 		background: #d7373b
+		// opacity: 0.7	/* style */
 	&-small
 		padding: 0 40px
 	&-green
 		background-color: #00ca74
 		&:hover
-			background: #00bc6c	
+			background: #00bc6c	/* style */
 	&-yellow
 		background-color: #efc84a
 		&:hover
@@ -73,6 +75,7 @@ a
 	max-width: 1170px
 	margin: 0 auto
 	padding: 0 10px
+
 //Main-block===================================
 
 .main
@@ -88,7 +91,7 @@ a
 
 .slider
 	&__screen-w
-		// max-width: 750px
+
 	&__image
 		max-width: 700px
 		margin: 0 0 0 440px
@@ -100,6 +103,7 @@ a
 		
 	&__item
 		position: relative
+
 		height: 100%
 		width: 1140px
 		display: flex
@@ -169,6 +173,7 @@ a
 	left: 40%
 	@media screen and (max-width: $md2)
 		bottom: 0px
+
 	@media screen and (max-width: $md4)
 		left: 24%
 	li 
@@ -199,7 +204,7 @@ a
 		border-bottom: 2px solid #eeeeee
 		@media screen and (max-width: $md2)
 			flex-wrap: wrap
-			// justify-content: center
+
 	&__card
 		margin: 0 10px 30px
 		@media screen and (max-width: $md2)
@@ -270,7 +275,6 @@ a
 			background-color: #fb565a
 			width: 25px
 			height: 2px
-			// position: absolute
 			
 	&__top-right
 		@media screen and (max-width: $md3)
@@ -292,6 +296,7 @@ a
 		width: 240px
 		position: relative
 		opacity: 0.5
+		transition: $anim
 		&:before
 			content: ""
 			display: block
@@ -310,6 +315,7 @@ a
 			&:before
 				content: ""
 				display: none
+
 		@media screen and (max-width: $md2)
 			&:last-child
 				&:before
@@ -362,10 +368,9 @@ a
 	&__bottom-column
 		padding: 0 25px 0 0
 		&:last-child
-			padding: 0
+			padding: 0	
 		@media screen and (max-width: $md4)
 			padding: 0 10px 45px 0
-
 
 .bottom
 	&__column-title
@@ -425,6 +430,7 @@ a
 			line-height: 25px
 	&__btn
 
+.container
 
 .map
 	height: 400px
@@ -439,31 +445,19 @@ a
 	top: 0
 	left: 0
 	background-color: rgba(0, 0, 0, 0.5)
-	// display: none
-	z-index: 10000
-
-.overlay-1
-	position: absolute
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	background-color: rgba(0, 0, 0, 0.5)
-	// display: none
 	z-index: 10000
 
 .js-overlay-thank-you
 	display: none
-.js-overlay-thank
-	display: none
+
 .popup 
 	position: absolute
-	// width: 670px
-	// height: 200px
 	left: 50%
 	bottom: -9%
 	transform: translate(-50%, -50%)
 	background-color: #fff
+	@media screen and (max-width: $md2)
+		bottom: 100px
 
 .popup__text 
 	margin: 50px 0 0
@@ -485,7 +479,9 @@ a
 			background-color: #fb565a
 		&.close-popup:after
 			background-color: #fb565a
-
+	@media screen and (max-width: $md3)
+		top: 8px
+		right: 27px
 
 .close-popup:before 
 	content: ""
@@ -569,14 +565,23 @@ a
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		@media screen and (max-width: $md2)
+			justify-content: left
+			flex-direction: column
 	&__container
 		padding: 80px 100px
+		@media screen and (max-width: $md3)
+			padding: 20px 25px
 	&__title
 		font-size: 45px
 		line-height: 45px
 		color: #000
 		font-weight: 500
 		padding: 0 0 40px
+		@media screen and (max-width: $md3)
+			flex: 40px
+			text-align: center
+			
 	&__form
 		display: inline-flex
 		justify-content: space-between
@@ -586,6 +591,7 @@ a
 		display: inline-flex
 		flex-direction: column
 		position: relative
+		
 		label 
 			padding: 0 0 12px
 			font-size: 16px
@@ -593,8 +599,10 @@ a
 			color: #000
 			font-weight: 600
 		input
+		
 			border: 2px solid #d7dcde
 			width: 360px
+			min-width: 300px
 			height: 50px
 			padding: 0 0 0 20px
 			transition: $anim
@@ -604,27 +612,29 @@ a
 				border: 2px solid #b4b9bb
 			&:focus
 				border: none
-
+			@media screen and (max-width: $md3)
+				width: 100%
 			&:active
 				background: #fff			
-		input:-webkit-autofill,
-		input:-webkit-autofill:hover, 
-		input:-webkit-autofill:focus
-		input:-webkit-autofill, 
-		textarea:-webkit-autofill,
-		textarea:-webkit-autofill:hover
-		textarea:-webkit-autofill:focus,
-		select:-webkit-autofill,
-		select:-webkit-autofill:hover,
-		select:-webkit-autofill:focus 
-		  border: 0
-		  -webkit-text-fill-color: #ссс
-		  -webkit-box-shadow: 0 0 0px 1000px transparent inset
-		  transition: background-color 5000s ease-in-out 0s
-		  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%)  
-	
+			input:-webkit-autofill,
+			input:-webkit-autofill:hover, 
+			input:-webkit-autofill:focus
+			input:-webkit-autofill, 
+			textarea:-webkit-autofill,
+			textarea:-webkit-autofill:hover
+			textarea:-webkit-autofill:focus,
+			select:-webkit-autofill,
+			select:-webkit-autofill:hover,
+			select:-webkit-autofill:focus 
+			  border: 0
+			  -webkit-text-fill-color: #ссс
+			  -webkit-box-shadow: 0 0 0px 1000px transparent inset
+			  transition: background-color 5000s ease-in-out 0s
+			  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%)  
+		
 	&__textarea
 		padding: 0 0 45px
+		width: 100%
 		label 
 			margin: 0 0 12px
 			font-size: 16px
@@ -633,7 +643,8 @@ a
 			font-weight: 600
 		textarea
 			border: 2px solid #d7dcde
-			width: 810px
+			max-width: 810px
+			min-width: 100%
 			height: 115px
 			padding: 15px 0 0 20px
 			margin: 12px 0 0 0
@@ -644,6 +655,8 @@ a
 				border: none
 
 .pupup
+	&__btn
+
 	&__write-us
 		position: absolute
 		width: 670px
