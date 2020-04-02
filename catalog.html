@@ -5,13 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Nerds</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 	<body>
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__wrapper">
 					<div class="header__logo">
-						<a href="#"><img src="images/logo/00.png" alt=""></a>
+						<a href="index.html"><img src="images/logo/00.png" alt=""></a>
 					</div>
 					<div class="header__nav">
 						<nav class="header__menu menu">
@@ -22,14 +23,14 @@
 			              </div>
 			            <div class="header-menu"></div>
 							<ul class="header__nav-list">
-								<li class="header__nav-item">
-									<a href="#" class="header__nav-link">Студия</a>
+								<li class="header__nav-item ">
+									<a href="#" class="header__nav-link artmenu">Студия</a>
 								</li>
 								<li class="header__nav-item">
 									<a href="#" class="header__nav-link">Клиенты</a>
 								</li>
 								<li class="header__nav-item">
-									<a href="#" class="header__nav-link">Магазин</a>
+									<a href="catalog.html" class="header__nav-link active">Магазин</a>
 								</li>
 								<li class="header__nav-item">
 									<a href="#" class="header__nav-link">Контакты</a>
@@ -52,7 +53,278 @@
 				</div>
 			</header>
 			<main>
-				
+				<section class="catalog__title">
+					<div class="container">
+						<p class="catalog__title-text">Магазин готовых шаблонов</p>
+					</div>
+				</section>
+				<section class="choice">
+					<div class="container">
+						<div class="container__body">
+			            <div class="sidebar">
+			              	<div class="price__block">
+			                	<div class="price__title">Стоимость:</div>
+			                	<div class="slider__range-block">
+			                  	<div id="slider-range"></div>
+			               	</div>
+			                	<div class="slider__amount">
+			                  	<label for="amount">ОТ</label>
+			                  	<input type="text" id="amount" >
+			                  	<label for="amount_1">ДО</label>
+			                  	<input type="text" id="amount_1" >
+			                </div>
+			              	</div>
+			              	<div class="producers__block">
+			                	<div class="producers__title">Особенности:</div>
+			                	<div class="producers__checkbox">
+				                  <ul>
+					                  <li>
+					                     <input type="checkbox" name="producers__checkbox" id="producers__checkbox1" checked>
+					                     <label for="producers__checkbox1" >Слайдер</label>
+					                  </li>
+					                  <li>
+					                     <input type="checkbox" name="producers__checkbox" id="producers__checkbox2">
+					                     <label for="producers__checkbox2" >Блок преимуществ</label>
+					                  </li>
+					                  <li>
+					                     <input type="checkbox" name="producers__checkbox" id="producers__checkbox3" checked>
+					                     <label for="producers__checkbox3" >Новости</label>
+					                  </li>
+					                  <li>
+					                     <input type="checkbox" name="producers__checkbox" id="producers__checkbox4">
+					                     <label for="producers__checkbox4" >Галерея</label>
+					                  </li>
+					                  <li>
+					                     <input type="checkbox" name="producers__checkbox" id="producers__checkbox5">
+					                     <label for="producers__checkbox5" >Корзина</label>
+					                  </li>
+				                  </ul>                
+			                </div>
+			              	</div>
+			              	<div class="charge__block">
+				               <div class="producers__title">Сетка:</div>
+				               <div class="charge__radio">
+				                  <ul>
+				                    <li>
+				               	      <input type="radio" name="radio1" id="radio1" checked>
+				               	      <label for="radio1" >Адаптивная</label>
+				                    </li>
+				                    <li>
+				                  	   <input type="radio" name="radio1" id="radio2">
+				                  	   <label for="radio2" >Фиксированная</label>
+				                    </li>
+				                    <li>
+				                  	   <input type="radio" name="radio1" id="radio3">
+				                  	   <label for="radio3" >Резиновая</label>
+				                    </li>
+				                  </ul>
+				               </div>
+				            </div>
+								<div class="search__button">
+				              	<button class="btn btn-gray">Показать</button>
+				            </div>
+			            </div>
+			            <div class="content__body-content">
+							   <div class="content__title">
+									<div class="left__block-1">
+										<div class="left__block">
+										  	<p>Сортировать:</p>
+										</div>
+									</div>
+									<div class="right__block-2">
+					               <div class="middle__block">
+												<div class="middle__block-radio">			
+													<input type="radio" name="middle__block" id="middle__block1" checked>
+													<label for="middle__block1" id="price">По цене</label>
+												</div>
+		   
+												<div class="middle__block-radio">
+													<input type="radio" name="middle__block" id="middle__block2">
+													<label for="middle__block2" class="middle__block2" id="type">По рейтингу</label>
+												</div>
+		   
+												<div class="middle__block-radio">
+													<input type="radio" name="middle__block" id="middle__block3">
+													<label for="middle__block3" id="characteristic">По функционалу:</label>
+												</div>
+										</div>
+										<div class="right__block">
+										   <input type="radio" name="right__block" id="right__block1">
+										   <label for="right__block1" id="sort-up" >
+												<svg class="sort-up">
+													<use xlink:href="images/catalog/sort.svg#sort-up">
+													</use>
+												</svg>
+										   </label> 
+										   
+										   <input type="radio" name="right__block" id="right__block2" checked>
+										   <label for="right__block2" id="sort-down">
+										   	<svg class="sort-down">
+													<use xlink:href="images/catalog/ab.svg#sort-down">
+													</use>
+												</svg>
+										   </label> 
+										</div>
+									</div>
+				            </div>
+				            <div class="content__cards" id="content__cards">
+				            	<div class="catalog-item" data-price="9900" data-type="1" data-char="1">
+				            		<div class="action">
+				            			<p class="action__title">Sedona</p>
+				            			<p class="action__subtitle">Информационный сайт для туристов</p>
+				            			<button class="action__btn btn ">9 900 руб.</button>
+				            		</div>
+				            		<div class="catalog__header catalog__header-one">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/01.jpg" alt="">
+				            		</div>
+				            	</div>
+				            	<div class="catalog-item" data-price="15500" data-type="3" data-char="2">
+				            		<div class="action">
+				            			<p class="action__title">Pink App</p>
+				            			<p class="action__subtitle">Продуктовый лендинг приложения для iOS и Android</p>
+				            			<button class="action__btn btn ">15 500 руб.</button>
+				            		</div>
+				            		<div class="catalog__header">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/02.jpg" alt="">
+				            		</div>
+				            	</div>
+				            	<div class="catalog-item" data-price="10 500" data-type="3" data-char="1">
+				            		<div class="action">
+				            			<p class="action__title">Barbershop</p>
+				            			<p class="action__subtitle">Сайт салона красоты.<br> Для мужчин, да.</p>
+				            			<button class="action__btn btn ">10 500 руб.</button>
+				            		</div>
+				            		<div class="catalog__header">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/03.jpg" alt="">
+				            		</div>
+				            	</div>
+				            	<div class="catalog-item" data-price="23000" data-type="2" data-char="1">
+				            		<div class="action">
+				            			<p class="action__title">MISHKA</p>
+				            			<p class="action__subtitle">Интернет-магазин вязаных игрушек</p>
+				            			<button class="action__btn btn ">23 000 руб.</button>
+				            		</div>
+				            		<div class="catalog__header catalog__header-two">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/04.jpg" alt="">
+				            		</div>
+				            	</div>
+				            	<div class="catalog-item" data-price="100000" data-type="1" data-char="1">
+				            		<div class="action">
+				            			<p class="action__title">A Plus</p>
+				            			<p class="action__subtitle">Лендинг курсов повышения квалификации</p>
+				            			<button class="action__btn btn ">100 000 руб.</button>
+				            		</div>
+				            		<div class="catalog__header catalog__header-one">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/05.jpg" alt="">
+				            		</div>
+				            	</div>
+				            	<div class="catalog-item" data-price="17500" data-type="2" data-char="1">
+				            		<div class="action">
+				            			<p class="action__title">КВАСТ</p>
+				            			<p class="action__subtitle">Промо-сайт производителя крафтового кваса</p>
+				            			<button class="action__btn btn">17 500 руб.</button>
+				            		</div>
+				            		<div class="catalog__header catalog__header-two">
+											<div class="item-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+				            		</div>
+				            		<div class="catalog__img">
+				            			<img src="images/catalog/06.jpg" alt="">
+				            		</div>
+				            	</div>
+				            </div>
+				            <div class="bread__crumbs-bottom">
+				              	<input type="radio" name="bread__crumbs-bottom" id="bread__crumbs-bottom1" checked>
+				              	<label for="bread__crumbs-bottom1" >1</label>
+				              	<input type="radio" name="bread__crumbs-bottom" id="bread__crumbs-bottom2">
+				              	<label for="bread__crumbs-bottom2" >2</label>  
+				              	<input type="radio" name="bread__crumbs-bottom" id="bread__crumbs-bottom3">
+				              	<label for="bread__crumbs-bottom3" >3</label> 
+				              	<input type="radio" name="bread__crumbs-bottom" id="bread__crumbs-bottom4">
+				              	<label for="bread__crumbs-bottom4" class="next">Следующая</label> 
+            				</div>
+			   			</div>
+
+			         </div>
+					</div>
+				</section>
+				<section class="contacts">
+	          	<div class="contacts__content">
+	            	<div id="map" class="map"></div>
+	            	<div class="container">
+	              		<div class="contacts__desk">
+	                		<p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+	                		<p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+	                		<p class="contacts__text">тел. +7 (812) 275-75-75</p>
+	                		<p class="contacts__btn"><button class="btn btn-small">Напишите нам</button></p>
+	              		</div>
+	            	</div>
+	          	</div>
+	        	</section>
+	        	<div class="overlay js-overlay-thank-you">
+		         <div class="popup js-thank-you">
+		            <div class="popup__container">
+		              <div class="popup__title">Напишите нам</div>
+		              <div class="popup__form">
+		                <form сlass="form" id="form" name="form">
+		                  <p class="popup__field">
+		                    <label for="name">Ваше имя:</label>
+		                    <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+		                  </p>
+		                  <p class="popup__field">
+		                    <label for="email">Ваш E-mail:</label>
+		                    <input type="text" name="email" id="validate" placeholder="youremail@mail.com">
+		                    <span id="validEmail" class="valid__email"></span>
+		                  </p>
+		                  <p class="popup__textarea">
+		                    <label for="message">Текст письма:</label>
+		                    <textarea name="message" placeholder="В свободной форме"></textarea>
+		                  </p>
+		                  <p class="pupup__btn"><button class="btn">Отправить</button></p>     
+		                </form>
+		              </div>
+		              <div class="close-popup js-close-thank-you"></div>
+		            </div>
+            	</div>
+        		</div>
 			</main>
 			<footer class="footer">
 				<div class="container">
@@ -70,5 +342,12 @@
 				</div>
 			</footer>
 		</div>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/slick/slick.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

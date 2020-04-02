@@ -1,0 +1,160 @@
+.wrapper
+	overflow: hidden
+	min-height: 100%
+	display: flex
+	flex-direction: column
+	position: relative
+	
+
+//======================================================
+.header
+	background-color: #eeeeee
+	padding: 0 0 20px
+	@media screen and (max-width: $md3)
+		position: fixed
+		z-index: 50
+		width: 100%
+	&__wrapper
+		max-width: 1140px
+		margin: 0 auto
+		margin-top: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 10px
+		@media screen and (max-width: $md4)
+			height: 40px
+	&__logo
+		cursor: pointer
+		z-index: 50
+		transition: $anim
+		&:hover
+			opacity: 0.3/* style */
+	&__nav
+		// margin: 80px 0 0 0
+	&__nav-list
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			display: block
+			margin: 30px 0 0 0
+	&__nav-item
+		margin: 0 40px 0 0
+		// border-bottom: 3px solid transparent
+		&:last-child
+			margin: 0
+		@media screen and (max-width: $md3)
+			// margin: 30px 0 0 0
+	&__nav-link
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+		display: flex
+		padding: 0 0 5px
+		border-bottom: 2px solid transparent
+		transition: $anim
+		@media screen and (max-width: $md3)
+			padding: 15px 0 0
+		&:hover
+			color: #fb565a
+		&:active
+			border-bottom: 2px solid #fb565a
+		&.active
+			border-bottom: 3px solid #fb565a
+	&__bascket
+		display: flex
+		align-items: center
+		border-bottom: 2px solid transparent
+
+		@media screen and (max-width: $md3)
+			padding: 15px 0 0
+		&:hover
+			color: #fb565a
+
+		&:active
+			border-bottom: 2px solid #fb565a
+	&__bascket-img
+		margin: 0 30px 0 0
+		@media screen and (max-width: $md2)
+			margin: 0 10px 0 0
+	&__buscket-link
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+	&__buscket-title
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+.bascket__nav-link
+	text-transform: uppercase
+	font-size: 16px
+	line-height: 30px
+	font-weight: 500
+	color: #000
+	transition: $anim
+	&:hover
+		color: #fb565a
+
+.icon-menu
+	@media screen and (max-width: $md3)
+		display: block
+		position: absolute
+		top: 45px
+		right: 15px
+		width: 30px
+		height: 18px
+		cursor: pointer
+		z-index: 5
+		span 
+			top: 8px
+			left: 0
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #000
+			&:first-child
+				top: 0
+			&:last-child
+				top: auto
+				bottom: 0
+		@media screen and (max-width: $md4)
+			top: 28px
+		&.active
+			span
+				background-color: #000
+				transform: scale(0)
+				&:first-child
+					top: 8px
+					transform: rotate(-45deg)
+				&:last-child 
+					bottom: 8px
+					transform: rotate(45deg)
+.header-menu
+	display: none
+	@media screen and (max-width: $md3)
+		display: block
+		position: fixed
+		width: 100%
+		height: 100%
+		overflow: auto
+		left: -120%
+		top: 0
+		background: #fff
+		padding: 95px 10px 20px 10px
+		-webkit-transition: all 0.5s
+		transition: all 0.5s 
+	&.active 
+		left: 0
+		z-index: 1	
+.buscket-icon
+	width: 15px
+	height: 15px
+	&:hover
+		fill: #fb565a
+		stroke: #fb565a
